@@ -18,7 +18,7 @@ class Game(pycge.PyConsoleGame):
         pycge.printXY(f'{self.timer};{self.dt}',self.timer/1000+1,1)
 
 class MyGame(newcge.ConsoleGame):
-    def event_load(self):
+    def load(self):
         self.clear()
 
     def update(self, dt):

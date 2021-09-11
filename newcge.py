@@ -40,7 +40,7 @@ class ConsoleGame:
     def gettime(self):
         return self.current_milli_time() - self.starttime
 
-    def event_load(self):
+    def load(self):
         pass
 
     def update(self, dt):

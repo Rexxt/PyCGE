@@ -35,7 +35,7 @@ class MyGame(ConsoleGame):
 * Instantiate the `MyGame` class and call its mainloop function:
 ```py
 class MyGame(ConsoleGame):
-    def event_load(self):
+    def load(self):
         self.clear()
         self.dt = 0
 

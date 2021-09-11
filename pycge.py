@@ -40,7 +40,6 @@ class PyConsoleGame:
         self.inGame = False
         cursor.show()
 
-
     def start(self):
         cursor.hide()
         self.inGame = True

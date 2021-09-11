@@ -17,7 +17,7 @@ class MyGame(ConsoleGame):
 ```
 * Now, let's set up a load event:
 ```py
-    def event_load(self):
+    def load(self):
         self.clear()
         self.dt = 0
 ```

@@ -60,7 +60,7 @@ class ConsoleGame:
         self.ingame = True
         self.starttime = self.current_ms_time()
         self.lastupdatetime = self.starttime
-        self.event_load()
+        self.load()
         while self.ingame:
             self.updatenum += 1
             self.update(self.gettime() - self.lastupdatetime)

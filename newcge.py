@@ -34,11 +34,11 @@ class ConsoleGame:
         stdout.write("\x1b7\x1b[%d;%df%s\x1b8" % (y, x, text))
         stdout.flush()
 
-    def current_milli_time(self):
+    def current_ms_time(self):
         return time() * 1000
 
     def gettime(self):
-        return self.current_milli_time() - self.starttime
+        return self.current_ms_time() - self.starttime
 
     def load(self):
         pass
@@ -58,7 +58,7 @@ class ConsoleGame:
 
     def mainloop(self):
         self.ingame = True
-        self.starttime = self.current_milli_time()
+        self.starttime = self.current_ms_time()
         self.lastupdatetime = self.starttime
         self.event_load()
         while self.ingame:

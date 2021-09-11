@@ -32,4 +32,21 @@ class MyGame(ConsoleGame):
         self.clear()
         self.printXY(f'{self.gettime()};{self.dt}', self.gettime()/1000+1, 1)
 ```
+* Instantiate the `MyGame` class and call its mainloop function:
+```py
+class MyGame(ConsoleGame):
+    def event_load(self):
+        self.clear()
+        self.dt = 0
+
+    def update(self, dt):
+        self.dt = dt
+
+    def draw(self):
+        self.clear()
+        self.printXY(f'{self.gettime()};{self.dt}', self.gettime()/1000+1, 1)
+
+mygame = MyGame()
+mygame.mainloop()
+```
 * Now, run your main file. You should see the game time in milliseconds followed by the time between updates in milliseconds.

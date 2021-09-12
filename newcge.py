@@ -34,6 +34,18 @@ class ConsoleGame:
         stdout.write("\x1b7\x1b[%d;%df%s\x1b8" % (y, x, text))
         stdout.flush()
 
+    def _resize(self, w, h):
+        if osname == 'nt':
+            system(f"mode {w} {h}")
+        else:
+            stdout.write(f"\x1b[8;{h};{w}t")
+
+    def _title(self, t):
+        if osname == 'nt':
+            system(f"title {t}")
+        else:
+            system(f'echo -en "\033]0;{t}\a"')
+
     def current_ms_time(self):
         return time() * 1000
 
@@ -58,6 +70,8 @@ class ConsoleGame:
 
     def mainloop(self):
         self.ingame = True
+        self._title(self.name)
+        self._resize(self.w, self.h)
         self.starttime = self.current_ms_time()
         self.lastupdatetime = self.starttime
         self.load()

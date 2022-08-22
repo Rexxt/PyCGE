@@ -82,7 +82,6 @@ class ConsoleGame:
             self.framenum += 1
             self.draw()
 
-
 def main():
     class MyGame(ConsoleGame):
         def update(self, dt):
